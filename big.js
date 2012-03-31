@@ -3,7 +3,7 @@ window.onload = function() {
     if (!s) return;
     function go(n) {
         cur = n;
-        var i = 1e3, e = s[n];
+        var i = 406.419, e = s[n];
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
@@ -13,13 +13,14 @@ window.onload = function() {
         } else {
             document.body.style.backgroundImage = '';
         }
-        while (
-            e.offsetWidth > window.innerWidth ||
-            e.offsetHeight > window.innerHeight) {
-            e.style.fontSize = (i -= 10) + 'px';
+        while ( e.offsetWidth > window.innerWidth/1.5 || e.offsetHeight > window.innerHeight/2 ) {
+            e.style.fontSize = (i -= 11.089) + 'px';
+			e.style.left = ( window.innerWidth - e.offsetWidth )/2 + 'px';
+			e.style.top = ( window.innerHeight - e.offsetHeight )/2 + 'px';
         }
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
+		console.log(e.style.margin.left, window.innerWidth/2);
     }
     document.onclick = function() {
         go(++cur % (s.length));
