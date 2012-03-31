@@ -16,7 +16,7 @@ window.onload = function() {
 			document.body.style.backgroundImage = '';
 		}
 		while ( e.offsetWidth > window.innerWidth/1.1 || e.offsetHeight > window.innerHeight/1.5 ) {
-		e.style.fontSize = (i -= i/1.6180339887498948482045868343656381177203091798057628) + 'px';
+			e.style.fontSize = (i -= i/1.6180339887498948482045868343656381177203091798057628) + 'px';
 			// console.log(e.style.fontSize);
 			e.style.left = ( window.innerWidth - e.offsetWidth )/2 + 'px';
 			e.style.top = ( window.innerHeight - e.offsetHeight )/2 + 'px';
