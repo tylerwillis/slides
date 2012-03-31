@@ -9,7 +9,7 @@ styling (`em`), and gives you left/right arrows for navigation.
 
 You can skip every step by doing
 
-    wget https://raw.github.com/mdznr/big/gh-pages/big.quickstart.html
+    curl https://raw.github.com/mdznr/big/gh-pages/big.quickstart.html
 
 This is a **bundle of all JS, CSS, and HTML code** - which means that it's
 a bit harder to update, but there are **no external dependencies** here,
