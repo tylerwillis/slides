@@ -9,17 +9,36 @@ body {
 	text-align: center;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, h5, p {
+	font-size: inherit;
+	font-weight: inherit;
 	margin: 0;
+	display: inline;
 }
 
-em, a {
-	font-style: normal;
+/* Red */ h1 {
+	color: #f21c0f;
+}
+
+/* Orange */ h2 {
 	color: #f2790f;
 }
 
+/* Green */ h3 {
+	color: #a2bf39;
+}
+
+/* Blue */ h4 {
+	color: #144673;
+}
+
+/* Light Blue */  h5 {
+	color: #2685bf;
+}
+
 a {
-	background: #f2790f;
+	font-style: normal;
+	background: #2685BF;
 	color: #fff;
 	text-decoration: none;
 	border-radius: 5px;
@@ -27,7 +46,8 @@ a {
 }
 
 img {
-	width: 100%;
+	max-width: 90%;
+	max-height: 50%;
 }
 
 div {
@@ -39,4 +59,10 @@ div {
 	width: auto;
 	height: auto;
 	margin-top: -10px;
+}
+
+li {
+	
+	text-align: left;
+	line-height: 1.618em;
 }

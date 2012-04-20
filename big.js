@@ -9,9 +9,13 @@ window.onload = function() {
 		for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
 		e.style.display = 'inline';
 		e.style.fontSize = i + 'px';
-		if (e.firstChild.nodeName === 'IMG') {
-			document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
-			e.firstChild.style.display = 'none';
+		if (e.firstChild.firstChild.nodeName.toLowerCase() === 'img') {
+			if ( e.firstChild.firstChild.title == "background" ) {
+				document.body.style.background = 'url(' + e.firstChild.firstChild.src + ') no-repeat';
+				e.firstChild.firstChild.style.display = 'none';
+			} else {
+				document.body.style.backgroundImage = '';
+			}
 		} else {
 			document.body.style.backgroundImage = '';
 		}
