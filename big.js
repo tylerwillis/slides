@@ -14,6 +14,9 @@ window.onload = function() {
 				document.body.style.background = 'url(' + e.firstChild.firstChild.src + ') no-repeat';
 				e.firstChild.firstChild.style.display = 'none';
 			} else {
+				if ( e.firstChild.firstChild.title == "border" ) {
+					e.firstChild.firstChild.className = "border";
+				}
 				document.body.style.backgroundImage = '';
 			}
 		} else {
